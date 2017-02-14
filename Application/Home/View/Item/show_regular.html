@@ -19,7 +19,7 @@
              <li><a href="{:U('Home/Item/word',array('item_id'=>$item['item_id']))}">{$Think.Lang.export}</a></li>
 
              <if condition="$ItemCreator">
-              <li><a href="{:U('Home/Item/setting',array('item_id'=>$item['item_id']))}">项目设置</a></li>          
+              <li><a href="{:U('Home/Item/setting',array('item_id'=>$item['item_id']))}">项目设置</a></li>
             </if>
 
             <li><a href="{:U('Home/Item/index')}">{$Think.Lang.goback}</a></li>
@@ -34,11 +34,11 @@
         <li><a href="{:U('Home/Item/index')}">{$Think.Lang.my_item}</a></li>
       </if>
 
-        
+
       </if>
 
     </ul>
-    </div>  
+    </div>
   </div>
 </div>
 
@@ -63,7 +63,7 @@
 
         <foreach name="catalogs" item="catalog">
 
-        
+
           <li><a class="show_cut_title" href="#" title="{$catalog.cat_name}"><i class="icon-chevron-right"></i>{$catalog.cat_name}</a>
             <ul class="child-ul nav-list hide">
               <!-- 二级目录的页面们 -->
@@ -71,7 +71,7 @@
                 <li><a href="{:U('Home/Page/index',array('page_id'=>$catalog_page['page_id']))}" data-page-id="{$catalog_page.page_id}" >{$catalog_page.page_title}</a></li>
               </foreach>
               <!-- 二级目录的子目录们（三级目录） -->
-                <foreach name="catalog.catalogs" item="catalog3">   
+                <foreach name="catalog.catalogs" item="catalog3">
                   <li class="third-child-catalog"><a <a class="show_cut_title" href="#" title="{$catalog3.cat_name}"><i class="icon-chevron-right"></i>{$catalog3.cat_name}</a>
                     <ul class="child-ul nav-list hide">
                       <!-- 二级目录的页面们 -->
@@ -111,6 +111,7 @@
       <!-- 编辑栏 -->
       <div class='page-edit-link pull-right hide'>
         <ul class="inline">
+          <li id="editInfo"></li>
           <if condition="$ItemPermn">
             <li><a class="btn btn-link" href="" id="share-page" title="{$Think.Lang.share_address_to_your_friends}">{$Think.Lang.share}</a></li>
                   <li><a class="btn btn-link" href="" id="edit-link" title="{$Think.Lang.edit_interface}">{$Think.Lang.edit}</a></li>
@@ -168,7 +169,7 @@
     <p>项目页面地址：<code id="share-page-link"></code>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="copy-page-link">复制链接</a>
   </p>
       <p style="border-bottom: 1px solid #eee;"><img  alt="二维码" id="qr-page-link" style="width:114px;height:114px;" src="?s=home/common/qrcode&size=3&url="> </p>
-      
+
     <p >单页面地址：<code id="share-single-link"></code>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" id="copy-single-link">复制链接</a>
     </p>
       <p style="border-bottom: 1px solid #eee;"><img  alt="二维码" id="qr-single-link" style="width:114px;height:114px;" src="?s=home/common/qrcode&size=3&url="> </p>

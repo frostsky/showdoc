@@ -4,7 +4,7 @@
 // --------
 ini_set("display_errors", "Off");
 error_reporting(E_ALL | E_STRICT);
-header("Content-type: text/html; charset=utf-8"); 
+header("Content-type: text/html; charset=utf-8");
 include("common.php");
 if(file_exists('./install.lock') && $f = file_get_contents("./install.lock")){
 	ajax_out(L("lock"),10099);
@@ -52,17 +52,17 @@ elseif ($db_type == "mysql") {
 function user_sqlite(){
         clear_runtime();//清除缓存
         write_home_config();
-        $config = 
+        $config =
 <<<EOD
 <?php
 return array(
     //'配置项'=>'配置值'
     //使用sqlite数据库
-    'DB_TYPE'   => 'Sqlite', 
-    'DB_NAME'   => 'Sqlite/showdoc.db.php', 
+    'DB_TYPE'   => 'Sqlite',
+    'DB_NAME'   => 'Sqlite/showdoc.db.php',
     //showdoc不再支持mysql http://www.showdoc.cc/help?page_id=31990
     'DB_HOST'   => 'localhost',
-    'DB_USER'   => 'showdoc', 
+    'DB_USER'   => 'showdoc',
     'DB_PWD'    => 'showdoc123456',
     'DB_PORT'   => 3306, // 端口
     'DB_PREFIX' => '', // 数据库表前缀
@@ -70,7 +70,7 @@ return array(
     'DB_DEBUG'  =>  TRUE, // 数据库调试模式 开启后可以记录SQL日志
     'URL_HTML_SUFFIX' => '',//url伪静态后缀
     'URL_MODEL' => 3 ,//URL兼容模式
-    'URL_ROUTER_ON'   => true, 
+    'URL_ROUTER_ON'   => true,
     'URL_ROUTE_RULES'=>array(
         ':id\d'               => 'Home/Item/show?item_id=:1',
 		':domain\s$'               => 'Home/Item/show?item_domain=:1',//item的个性域名
@@ -89,10 +89,10 @@ return array(
                     'saveName' => array ('uniqid', ''),
                     'driver' => 'Qiniu',
                     'driverConfig' => array (
-                            'secrectKey' => '', 
+                            'secrectKey' => '',
                             'accessKey' => '',
                             'domain' => '',
-                            'bucket' => '', 
+                            'bucket' => '',
                         )
                     ),
 );
@@ -118,6 +118,7 @@ function write_home_config(){
         $config .= "
 return array(
 	//'配置项'=>'配置值'
+    'SITE_NAME' => '文档中心',
     'LANG_SWITCH_ON' => true,   // 开启语言包功能
     'LANG_AUTO_DETECT' => false, // 自动侦测语言 开启多语言功能后有效
     'DEFAULT_LANG' => '{$DEFAULT_LANG}', // 默认语言

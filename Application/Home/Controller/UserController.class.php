@@ -20,7 +20,7 @@ class UserController extends BaseController {
 			  		if ( ! D("User")->isExist($username) ) {
 						$ret = D("User")->register($username,$password);
 						if ($ret) {
-					      $this->message(L('register_succeeded'),U('Home/User/login'));					    
+					      $this->message(L('register_succeeded'),U('Home/User/login'));
 						}else{
 						  $this->message(L('username_or_password_incorrect'));
 						}
@@ -34,7 +34,7 @@ class UserController extends BaseController {
 			  }else{
 				    $this->message(L('verification_code_are_incorrect'));
 			  }
-			  
+
 
 			}
 	}
@@ -71,7 +71,7 @@ class UserController extends BaseController {
 		      $token = D("UserToken")->createToken($ret['uid']);
 	          cookie('cookie_token',$token,60*60*24*90);//此处由服务端控制token是否过期，所以cookies过期时间设置多久都无所谓
 		      unset($ret['password']);
-	          $this->message(L('login_succeeded'),U('Home/Item/index'));		        
+	          $this->message(L('login_succeeded'),U('Home/Item/index'));
 		    }else{
 		      $this->message(L('username_or_password_incorrect'));
 		    }
@@ -84,16 +84,16 @@ class UserController extends BaseController {
           		  cookie('cookie_token',$token,60*60*24*90);//此处由服务端控制token是否过期，所以cookies过期时间设置多久都无所谓
 			      unset($ret['password']);
 
-		          $this->message(L('login_succeeded'),U('Home/Item/index'));		        
+		          $this->message(L('login_succeeded'),U('Home/Item/index'));
 			    }else{
 			      $this->message(L('username_or_password_incorrect'));
 			    }
 
 			  }else{
 			    $this->message(L('verification_code_are_incorrect'));
-			  }	
+			  }
 		  }
-		  
+
 
 		}
 	}
@@ -145,7 +145,7 @@ class UserController extends BaseController {
 
 					}
 
-				}else{	
+				}else{
 					$this->message(L('old_password_incorrect'));
 				}
 
@@ -159,5 +159,25 @@ class UserController extends BaseController {
 		cookie('cookie_token',NULL);
 		session(null);
 		$this->message(L('logout_succeeded'),U('Home/index/index'));
+	}
+
+	// 用户列表
+	public function userlist()
+	{
+		$ret = D("User")->order("uid DESC")->select();
+		$this->assign("userlist", $ret);
+		$this->display ();
+	}
+
+    // 删除用户
+    public function deluser()
+	{
+        $uid = I('post.uid/d', 0);
+        if (!$uid){
+            $this->ajaxReturn(['err'=>1,'msg'=>'参数错误']);
+        }
+
+		D("User")->where("uid=$uid")->delete();
+		$this->ajaxReturn(['err'=>0,'msg'=>'']);
 	}
 }
