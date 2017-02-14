@@ -1,77 +1,72 @@
 ﻿## 中文版教程：https://www.showdoc.cc/help 
 
-### What is ShowDoc ?
+### ShowDoc是什么 ?
 
-Whenever we take over a module or project which has been developed by other people, we always feel crazy watching at those codes without notes. Where is the document?! Where is the document?! **Show me the doc !!**
+每当接手一个他人开发好的模块或者项目，看着那些没有写注释的代码，我们都无比抓狂。文档呢？！文档呢？！Show me the doc ！！
 
-A programmer often hopes the others to write technical documents, with the hope of not writing them on his/her own. Because writing a technical document needs a lot of time to handle the format and layout, and the person who writes it has to think of all kinds of non-technical details such as which catalog to put in the newly-established word document
+程序员都很希望别人能写技术文档，而自己却很不希望要写文档。因为写文档需要花大量的时间去处理格式排版，想着新建的word文档放在哪个目录等各种非技术细节。
 
-All kinds of the word documents are kept by different persons in a team dispersedly. The person who needs other documents gets the documents by shouting out. He/She gives a shout asking for the documents and then receives them from other people by IMs or the e-mail. This kind of communication is not bad, but the efficiency is not high.
+word文档零零散散地放在团队不同人那里，需要文档的人基本靠吼，吼一声然后上qq或者邮箱接收对方丢过来的文档。这种沟通方式当然可以，只是效率不高。
 
-ShowDoc is a tool greatly applicable for an IT team to share documents online. It can promote communication efficiency among members of the team.
+ShowDoc就是一个非常适合IT团队的在线文档分享工具，它可以加快团队之间沟通的效率。 
 
-### What can it be used for?
+### 它可以用来做什么 ?
 
-- #### API Document （ [Demo](https://www.showdoc.cc/demo-en)）
+- #### API文档 
  
- With the development of mobile Internet, BaaS (Backend as a Service) becomes more and more popular. The Server end provides API, and the APP end or Webpage frontend can invoke data conveniently. Using ShowDoc can compile exquisite API documents in a very fast and convenient way.
+ 随着移动互联网的发展，BaaS（后端即服务）越来越流行。服务端提供API，APP端或者网页前端便可方便调用数据。用ShowDoc可以非常方便快速地编写出美观的API文档。
 
-- #### Data Dictionary （ [Demo](https://www.showdoc.cc/demo-en)）
+- #### 数据字典
  
- A good Data Dictionary can easily exhibit database structure to other people, such as definition of each field and the like.
+ 一份好的数据字典可以很方便地向别人说明你的数据库结构，如各个字段的释义等。
 
-- #### Explanation Document （ [Demo](https://www.showdoc.cc/help-en)）
+- #### 说明文档
  
- You can absolutely use ShowDoc to compile the explanation documents for some tools, as well as to compile some technical specifications explanation documents for the team to look up.
+ 你完全可以使用showdoc来编写一些工具的说明书,也可以编写一些技术规范说明文档以供团队查阅。
  
-### What functions does it have?
+### 它都有些什么功能 ?
 
-- #### Sharing and Exporting
+- #### 分享与导出
 
- Responsive webpage design can share the project documents to computer or mobile devices for reading. It can also export the project into word document for browsing offline.
+ 响应式网页设计，可将项目文档分享到电脑或移动设备查看。同时也可以将项目导出成word文件，以便离线浏览。
  
-- #### Permission Management
+- #### 权限管理
 
- - Public Project and Private Project
+ - 公开项目与私密项目
  
-   Projects on ShowDoc are divided into two categories including Public Project and Private Project. Public Project can be visited by any user no matter he/she logs in or not, while inputting password for verification is needed for visiting the Private Project. The password is set by project creator. 
+   ShowDoc上的项目有公开项目和私密项目两种。公开项目可供任何登录与非登录的用户访问，而私密项目则需要输入密码验证访问。密码由项目创建者设置。
    
-  - Project Transfer
+  - 项目转让
   
-   The project creator can transfer the project to other users of the website freely.
+   项目创建者可以自由地把项目转让给网站的其他用户。
    
-  - Project Members
+  - 项目成员
   
-   You can easily add or delete project members in the project of ShowDoc. Members of the project can edit the project, but they can not transfer or delete the project (only creator of the project has the permission).
+   你可以很方便地为ShowDoc的项目添加、删除项目成员。项目成员可以对项目进行编辑，但不可转让或删除项目（只有项目创建者才有权限）
    
-- #### Edit Function
-  - Markdown Edit
+- #### 编辑功能 
+  - Markdown 编辑
   
-   ShowDoc adopts Markdown Editor, and it is excellent both in editing and reading experience. If you know nothing about Markdown, please search “Learning and Introduction of Markdown” on the search engine.
+   ShowDoc采用markdown编辑器，无论是编辑还是阅读体验都极佳很棒。如果你不了解Markdown，请在搜索引擎搜索”认识与入门 Markdown”
    
-  - Template Insert
+  - 模板插入
   
-   On the editing page of ShowDoc, a click on the button which is on the top of the Editor can easily insert API interface template and data dictionary template. After inserting the template, altering data is the only thing that need to do and it reduces a lot of work in editing.
+   在ShowDoc的编辑页面，点击编辑器上方的按钮可方便地插入API接口模板和数据字典模板。插入模板后，剩下的就是改动数据了，省去了很多编辑的力气。 
    
-  - History Version
+  - 历史版本
   
-   ShowDoc provides a function of History Version on the page, and you can easily restore the page to the former version.
+   ShowDoc为页面提供历史版本功能，你可以方便地把页面恢复到之前的版本。
    
 
-### Deploy It to Your Own Server
- - ShowDoc Deploy Manual
+### 部署到自己的服务器
+ - ShowDoc部署手册
   
      Please refer to:[https://www.showdoc.cc/help-en?page_id=16975](https://www.showdoc.cc/help-en?page_id=16975)
   
 
-### Copyright 
-
- ShowDoc is issued complying with Apache2 Open Source License, and it is for free use. 
- 
- Copyright © 2016 by star7th 
- 
- 
- E-mail: xing7th#gmail.com (change # into @) 
- 
- All rights reserved. 
- 
+### 版权 
+ ShowDoc遵循Apache2开源协议发布，并提供免费使用。
+ 版权所有Copyright © 2016 by star7th
+ 博客：http://blog.star7th.com
+ 邮箱：xing7th#gmail.com（把#改为@）
+ All rights reserved.
