@@ -1,5 +1,3 @@
-﻿## 中文版教程：https://www.showdoc.cc/help 
-
 ### ShowDoc是什么 ?
 
 每当接手一个他人开发好的模块或者项目，看着那些没有写注释的代码，我们都无比抓狂。文档呢？！文档呢？！Show me the doc ！！
